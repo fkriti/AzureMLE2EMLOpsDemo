@@ -22,7 +22,7 @@ on:
         default: "kritifaujdar-ws"
         type: string
     secrets:
-      AZ_CREDS1:
+      AZ_CREDS:
         required: true
 
 env:
@@ -64,7 +64,7 @@ jobs:
     - name: azure-login-step
       uses: azure/login@v1
       with:
-        creds: ${{secrets.AZ_CREDS1}}
+        creds: ${{secrets.AZ_CREDS}}
     - name: set-azureml-ws-context-step
       run: bash setup.sh 
       working-directory: cli
@@ -86,7 +86,7 @@ jobs:
     - name: azure-login-step
       uses: azure/login@v1
       with:
-        creds: ${{secrets.AZ_CREDS1}}
+        creds: ${{secrets.AZ_CREDS}}
     - name: set-azureml-ws-context-step
       run: bash setup.sh 
       working-directory: cli
@@ -110,7 +110,7 @@ jobs:
     - name: azure-login-step
       uses: azure/login@v1
       with:
-        creds: ${{secrets.AZ_CREDS1}}
+        creds: ${{secrets.AZ_CREDS}}
     - name: set-azureml-ws-context-step
       run: bash setup.sh 
       working-directory: cli
