@@ -4,24 +4,24 @@ on:
   workflow_dispatch:
     inputs:
       GROUP:
-        default: "rg-contoso-819prod"
+        default: "kritifaujdar-rg"
       LOCATION:
-        default: "eastus"
+        default: "westus"
       WORKSPACE:
-        default: "mlw-contoso-819prod"
+        default: "kritifaujdar-ws"
       TRAININGJOB_RUNID:
         type: string
         required: true
   workflow_call:
     inputs:
       GROUP:
-        default: "rg-contoso-819prod"
+        default: "kritifaujdar-rg"
         type: string
       LOCATION:
-        default: "eastus"
+        default: "westus"
         type: string
       WORKSPACE:
-        default: "mlw-contoso-819prod"
+        default: "kritifaujdar-ws"
         type: string
       TRAININGJOB_RUNID:
         type: string
